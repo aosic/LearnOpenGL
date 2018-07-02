@@ -82,6 +82,24 @@ void RenderScene(void)
     
 }
 
+void KeyPressFunc(unsigned char key, int x, int y)
+{
+    
+}
+
+void SpecialKeys(int key, int x, int y)
+{
+
+}
+
+//鼠标点击事件
+void MouseKey(int button,int state, int x,int y)
+{
+    //button:那个键位，左键(GLUT_LEFT_BUTTON)、右键(GLUT_RIGHT_BUTTON)
+    //state:按下(GLUT_UP)/抬起(GLUT_DOWN)
+    //x,y：光标位置
+}
+
 int main(int argc,char* argv[])
 
 {
@@ -109,7 +127,9 @@ int main(int argc,char* argv[])
     //注册回调函数
     
     glutReshapeFunc(ChangeSize);
-    
+    glutKeyboardFunc(KeyPressFunc);
+    glutSpecialFunc(SpecialKeys);
+    glutMouseFunc(MouseKey);
     glutDisplayFunc(RenderScene);
     
     //驱动程序的初始化中没有出现任何问题。
