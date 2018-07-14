@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F076DDEB20FA54D6007C8584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F076DDEA20FA54D6007C8584 /* Assets.xcassets */; };
+		F076DDEE20FA54D7007C8584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F076DDEC20FA54D7007C8584 /* Main.storyboard */; };
+		F076DDFA20FA54ED007C8584 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F076DDF920FA54ED007C8584 /* OpenGL.framework */; };
+		F076DDFC20FA54F6007C8584 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F076DDFB20FA54F6007C8584 /* GLUT.framework */; };
+		F076DDFE20FA54FF007C8584 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F076DDFD20FA54FF007C8584 /* libGLTools.a */; };
+		F076DE0320FA5547007C8584 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F076DDFF20FA5547007C8584 /* main.cpp */; };
+		F076DE0420FA5547007C8584 /* MoonLike.tga in Resources */ = {isa = PBXBuildFile; fileRef = F076DE0020FA5547007C8584 /* MoonLike.tga */; };
+		F076DE0520FA5547007C8584 /* Marslike.tga in Resources */ = {isa = PBXBuildFile; fileRef = F076DE0120FA5547007C8584 /* Marslike.tga */; };
+		F076DE0620FA5547007C8584 /* Marble.tga in Resources */ = {isa = PBXBuildFile; fileRef = F076DE0220FA5547007C8584 /* Marble.tga */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F076DDE120FA54D5007C8584 /* X19SpheresWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = X19SpheresWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F076DDEA20FA54D6007C8584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F076DDED20FA54D7007C8584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F076DDEF20FA54D7007C8584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F076DDF220FA54D7007C8584 /* X19SpheresWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X19SpheresWorld.entitlements; sourceTree = "<group>"; };
+		F076DDF920FA54ED007C8584 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F076DDFB20FA54F6007C8584 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		F076DDFD20FA54FF007C8584 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../OpenGlShare/libGLTools.a; sourceTree = "<group>"; };
+		F076DDFF20FA5547007C8584 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F076DE0020FA5547007C8584 /* MoonLike.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoonLike.tga; sourceTree = "<group>"; };
+		F076DE0120FA5547007C8584 /* Marslike.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Marslike.tga; sourceTree = "<group>"; };
+		F076DE0220FA5547007C8584 /* Marble.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Marble.tga; sourceTree = "<group>"; };
+		F076DE0920FA555A007C8584 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
+		F076DE0A20FA555A007C8584 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
+		F076DE0B20FA555A007C8584 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
+		F076DE0C20FA555A007C8584 /* GLBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatch.h; sourceTree = "<group>"; };
+		F076DE0D20FA555A007C8584 /* GLBatchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatchBase.h; sourceTree = "<group>"; };
+		F076DE0E20FA555A007C8584 /* GLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrame.h; sourceTree = "<group>"; };
+		F076DE0F20FA555A007C8584 /* GLFrustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrustum.h; sourceTree = "<group>"; };
+		F076DE1020FA555A007C8584 /* GLGeometryTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLGeometryTransform.h; sourceTree = "<group>"; };
+		F076DE1120FA555A007C8584 /* GLMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMatrixStack.h; sourceTree = "<group>"; };
+		F076DE1220FA555A007C8584 /* GLShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShaderManager.h; sourceTree = "<group>"; };
+		F076DE1320FA555A007C8584 /* GLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTools.h; sourceTree = "<group>"; };
+		F076DE1420FA555A007C8584 /* GLTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTriangleBatch.h; sourceTree = "<group>"; };
+		F076DE1520FA555A007C8584 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
+		F076DE1620FA555A007C8584 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F076DDDE20FA54D5007C8584 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F076DDFE20FA54FF007C8584 /* libGLTools.a in Frameworks */,
+				F076DDFC20FA54F6007C8584 /* GLUT.framework in Frameworks */,
+				F076DDFA20FA54ED007C8584 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F076DDD820FA54D5007C8584 = {
+			isa = PBXGroup;
+			children = (
+				F076DDE320FA54D5007C8584 /* X19SpheresWorld */,
+				F076DDE220FA54D5007C8584 /* Products */,
+				F076DDF820FA54EC007C8584 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F076DDE220FA54D5007C8584 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F076DDE120FA54D5007C8584 /* X19SpheresWorld.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F076DDE320FA54D5007C8584 /* X19SpheresWorld */ = {
+			isa = PBXGroup;
+			children = (
+				F076DE0720FA555A007C8584 /* include */,
+				F076DDFF20FA5547007C8584 /* main.cpp */,
+				F076DE0220FA5547007C8584 /* Marble.tga */,
+				F076DE0120FA5547007C8584 /* Marslike.tga */,
+				F076DE0020FA5547007C8584 /* MoonLike.tga */,
+				F076DDEA20FA54D6007C8584 /* Assets.xcassets */,
+				F076DDEC20FA54D7007C8584 /* Main.storyboard */,
+				F076DDEF20FA54D7007C8584 /* Info.plist */,
+				F076DDF220FA54D7007C8584 /* X19SpheresWorld.entitlements */,
+			);
+			path = X19SpheresWorld;
+			sourceTree = "<group>";
+		};
+		F076DDF820FA54EC007C8584 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F076DDFD20FA54FF007C8584 /* libGLTools.a */,
+				F076DDFB20FA54F6007C8584 /* GLUT.framework */,
+				F076DDF920FA54ED007C8584 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F076DE0720FA555A007C8584 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F076DE0820FA555A007C8584 /* GL */,
+				F076DE0C20FA555A007C8584 /* GLBatch.h */,
+				F076DE0D20FA555A007C8584 /* GLBatchBase.h */,
+				F076DE0E20FA555A007C8584 /* GLFrame.h */,
+				F076DE0F20FA555A007C8584 /* GLFrustum.h */,
+				F076DE1020FA555A007C8584 /* GLGeometryTransform.h */,
+				F076DE1120FA555A007C8584 /* GLMatrixStack.h */,
+				F076DE1220FA555A007C8584 /* GLShaderManager.h */,
+				F076DE1320FA555A007C8584 /* GLTools.h */,
+				F076DE1420FA555A007C8584 /* GLTriangleBatch.h */,
+				F076DE1520FA555A007C8584 /* math3d.h */,
+				F076DE1620FA555A007C8584 /* StopWatch.h */,
+			);
+			name = include;
+			path = ../../OpenGlShare/include;
+			sourceTree = "<group>";
+		};
+		F076DE0820FA555A007C8584 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				F076DE0920FA555A007C8584 /* glew.h */,
+				F076DE0A20FA555A007C8584 /* glxew.h */,
+				F076DE0B20FA555A007C8584 /* wglew.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F076DDE020FA54D5007C8584 /* X19SpheresWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F076DDF520FA54D7007C8584 /* Build configuration list for PBXNativeTarget "X19SpheresWorld" */;
+			buildPhases = (
+				F076DDDD20FA54D5007C8584 /* Sources */,
+				F076DDDE20FA54D5007C8584 /* Frameworks */,
+				F076DDDF20FA54D5007C8584 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = X19SpheresWorld;
+			productName = X19SpheresWorld;
+			productReference = F076DDE120FA54D5007C8584 /* X19SpheresWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F076DDD920FA54D5007C8584 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = chenchangqing;
+				TargetAttributes = {
+					F076DDE020FA54D5007C8584 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = F076DDDC20FA54D5007C8584 /* Build configuration list for PBXProject "X19SpheresWorld" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F076DDD820FA54D5007C8584;
+			productRefGroup = F076DDE220FA54D5007C8584 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F076DDE020FA54D5007C8584 /* X19SpheresWorld */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F076DDDF20FA54D5007C8584 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F076DDEB20FA54D6007C8584 /* Assets.xcassets in Resources */,
+				F076DDEE20FA54D7007C8584 /* Main.storyboard in Resources */,
+				F076DE0520FA5547007C8584 /* Marslike.tga in Resources */,
+				F076DE0420FA5547007C8584 /* MoonLike.tga in Resources */,
+				F076DE0620FA5547007C8584 /* Marble.tga in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F076DDDD20FA54D5007C8584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F076DE0320FA5547007C8584 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F076DDEC20FA54D7007C8584 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F076DDED20FA54D7007C8584 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F076DDF320FA54D7007C8584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F076DDF420FA54D7007C8584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F076DDF620FA54D7007C8584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = X19SpheresWorld/X19SpheresWorld.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
+				INFOPLIST_FILE = X19SpheresWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccqlearn.X19SpheresWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F076DDF720FA54D7007C8584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = X19SpheresWorld/X19SpheresWorld.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
+				INFOPLIST_FILE = X19SpheresWorld/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccqlearn.X19SpheresWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F076DDDC20FA54D5007C8584 /* Build configuration list for PBXProject "X19SpheresWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F076DDF320FA54D7007C8584 /* Debug */,
+				F076DDF420FA54D7007C8584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F076DDF520FA54D7007C8584 /* Build configuration list for PBXNativeTarget "X19SpheresWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F076DDF620FA54D7007C8584 /* Debug */,
+				F076DDF720FA54D7007C8584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F076DDD920FA54D5007C8584 /* Project object */;
+}
