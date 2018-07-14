@@ -1,4 +1,3 @@
-
 #include "GLTools.h"
 #include "GLMatrixStack.h"
 #include "GLFrame.h"
@@ -19,97 +18,63 @@ GLFrame             viewFrame;
 GLFrustum           viewFrustum;
 GLBatch             tubeBatch;
 GLBatch             innerBatch;
-//GLMatrixStack 堆栈矩阵
 GLMatrixStack       modelViewMatix;
 GLMatrixStack       projectionMatrix;
-
-//几何变换的管道
 GLGeometryTransform transformPipeline;
 GLShaderManager     shaderManager;
 
 
-//启动demo，就会调用这个方法
-void ChangeSize(int w, int h)
-{
-    if (h == 0) {
-        h = 1;
-    }
-    
-    glViewport(0, 0,w, h);
-    
-    //设置正投影矩阵
-    viewFrustum.SetOrthographic(-130.0f, 130.0f, -130.0f, 130.0f, -130.0f, 130.0f);
-    
-    //
-    //1.获取投影矩阵 viewFrustum.GetProjectionMatrix();
-    //2.设置到矩阵堆栈中
-    projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    
-    
-    //使用变换管道来管理2个矩阵堆栈(模型视图矩阵堆栈\投影矩阵堆栈)
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
-    
-    
-}
 
 
-// 召唤场景
 void RenderScene(void)
 {
+    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    //开启深度测试
+  
     glEnable(GL_DEPTH_TEST);
+    
     
     modelViewMatix.PushMatrix(viewFrame);
     
-    //设置2个颜色
-    GLfloat vRed[] = {1.0f,0.0f,0.0f,1.0f};
-    GLfloat vGray[] = {0.75f,0.75f,0.75f,1.0f};
+    GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
+    GLfloat vGray[] = { 0.75f, 0.75f, 0.75f, 1.0f };
     
-    //默认光源着色器
-    shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT,transformPipeline.GetModelViewMatrix(),transformPipeline.GetProjectionMatrix(),vRed);
+    shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vRed);
     tubeBatch.Draw();
     
     
-    shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT,transformPipeline.GetModelViewMatrix(),transformPipeline.GetProjectionMatrix(),vRed);
+    shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vGray);
     innerBatch.Draw();
     
     modelViewMatix.PopMatrix();
     
+    
     glutSwapBuffers();
-    
-    
 }
 
 
-//对图形上下文初始化
 void SetupRC()
 {
-    //设置清屏颜色
+   
     glClearColor(0.0f, 0.0f, 0.75f, 1.0f );
     
+   
+    glEnable(GL_DEPTH_TEST);
     
-    
-    //初始化着色器管理器
     shaderManager.InitializeStockShaders();
+    viewFrame.MoveForward(450.0f);
     
-    //指定绘图的方式\顶点数
+    
     tubeBatch.Begin(GL_QUADS, 200);
     
     float fZ = 100.0f;
     float bZ = -100.0f;
     
-    //左面板的颜色、顶点、光照数据
-    //颜色值
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
-    //光照法线
-    //接受3个表示坐标的值，指定一条垂直于三角形表面的法线向量
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
-    //顶点数据
     tubeBatch.Vertex3f(-50.0f, 50.0f, 100.0f);
     
-    
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-50.0f, -50.0f, fZ);
@@ -234,7 +199,6 @@ void SetupRC()
     tubeBatch.Normal3f(-1.0f, 0.0f, 0.0f);
     tubeBatch.Vertex3f(-50.0f, -50.0f, fZ);
     
-    
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-50.0f, 50.0f, fZ);
@@ -282,7 +246,7 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, 50.0f,fZ);
-    
+  
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f, -35.0f, fZ);
@@ -346,6 +310,7 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(1.0f, 0.0f, 0.0f);
     tubeBatch.Vertex3f(50.0f, 50.0f, bZ);
+   
     
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Normal3f(-1.0f, 0.0f, 0.0f);
@@ -363,6 +328,7 @@ void SetupRC()
     tubeBatch.Normal3f(-1.0f, 0.0f, 0.0f);
     tubeBatch.Vertex3f(-50.0f, -50.0f, fZ);
     
+
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f,50.0f,bZ);
@@ -378,7 +344,6 @@ void SetupRC()
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-50.0f, 50.0f, bZ);
-    
     
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
@@ -399,7 +364,7 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     
     tubeBatch.Vertex3f(50.0f, 50.0f, bZ);
-    
+  
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, 50.0f, bZ);
@@ -415,7 +380,7 @@ void SetupRC()
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(-35.0f, 50.0f, bZ);
     
-    
+   
     tubeBatch.Normal3f(0.0f, 0.0f, -1.0f);
     tubeBatch.Color4f(1.0f, 0.0f, 0.0f, 1.0f);
     tubeBatch.Vertex3f(35.0f, -35.0f,bZ);
@@ -433,8 +398,9 @@ void SetupRC()
     
     tubeBatch.End();
     
-    //内壁
+    
     innerBatch.Begin(GL_QUADS, 40);
+    
     
     innerBatch.Color4f(0.75f, 0.75f, 0.75f, 1.0f);
     innerBatch.Normal3f(0.0f, 1.0f, 0.0f);
@@ -449,7 +415,6 @@ void SetupRC()
     innerBatch.Normal3f(0.0f, 1.0f, 0.0f);
     innerBatch.Vertex3f(-35.0f,35.0f,bZ);
     
-    
     innerBatch.Color4f(0.75f, 0.75f, 0.75f, 1.0f);
     innerBatch.Normal3f(0.0f, 1.0f, 0.0f);
     innerBatch.Vertex3f(-35.0f, -35.0f, fZ);
@@ -463,7 +428,6 @@ void SetupRC()
     innerBatch.Normal3f(0.0f, 1.0f, 0.0f);
     innerBatch.Vertex3f(35.0f, -35.0f, fZ);
     
-    
     innerBatch.Color4f(0.75f, 0.75f, 0.75f, 1.0f);
     innerBatch.Normal3f(1.0f, 0.0f, 0.0f);
     innerBatch.Vertex3f(-35.0f, 35.0f, fZ);
@@ -476,7 +440,6 @@ void SetupRC()
     innerBatch.Color4f(0.75f, 0.75f, 0.75f, 1.0f);
     innerBatch.Normal3f(1.0f, 0.0f, 0.0f);
     innerBatch.Vertex3f(-35.0f, -35.0f, fZ);
-    
     
     innerBatch.Color4f(0.75f, 0.75f, 0.75f, 1.0f);
     innerBatch.Normal3f(-1.0f, 0.0f, 0.0f);
@@ -509,11 +472,26 @@ void SpecialKeys(int key, int x, int y)
     if(key == GLUT_KEY_RIGHT)
         viewFrame.RotateWorld(m3dDegToRad(5.0), 0.0f, 1.0f, 0.0f);
     
-    //刷新窗口
+    // Refresh the Window
     glutPostRedisplay();
 }
 
 
+void ChangeSize(int w, int h)
+{
+    if (h == 0) {
+        h = 1;
+    }
+    glViewport(0, 0, w, h);
+    
+    //设置透视投影矩阵
+    viewFrustum.SetPerspective(35.0f, float(w)/float(h), 1.0f, 1000.0f);
+    
+    projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
+    
+    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    
+}
 
 
 int main(int argc, char* argv[])
@@ -523,7 +501,7 @@ int main(int argc, char* argv[])
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("Orthographic Projection Example");
+    glutCreateWindow("Perspective Projection Example");
     glutReshapeFunc(ChangeSize);
     glutSpecialFunc(SpecialKeys);
     glutDisplayFunc(RenderScene);

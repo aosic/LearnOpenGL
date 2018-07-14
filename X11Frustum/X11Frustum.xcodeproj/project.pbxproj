@@ -7,24 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0D978EA20F99B8400AF1A52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D978E920F99B8400AF1A52 /* AppDelegate.m */; };
-		F0D978ED20F99B8400AF1A52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D978EC20F99B8400AF1A52 /* ViewController.m */; };
 		F0D978EF20F99B8600AF1A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0D978EE20F99B8600AF1A52 /* Assets.xcassets */; };
 		F0D978F220F99B8600AF1A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0D978F020F99B8600AF1A52 /* Main.storyboard */; };
-		F0D978F520F99B8600AF1A52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D978F420F99B8600AF1A52 /* main.m */; };
+		F0D978FE20F99BBB00AF1A52 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D978FD20F99BBB00AF1A52 /* GLUT.framework */; };
+		F0D9790020F99BC300AF1A52 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D978FF20F99BC300AF1A52 /* OpenGL.framework */; };
+		F0D9790220F99D7200AF1A52 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D9790120F99D7200AF1A52 /* libGLTools.a */; };
+		F0D9791420F99E2600AF1A52 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0D9791320F99E2600AF1A52 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F0D978E520F99B8400AF1A52 /* X11Frustum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = X11Frustum.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0D978E820F99B8400AF1A52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F0D978E920F99B8400AF1A52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F0D978EB20F99B8400AF1A52 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0D978EC20F99B8400AF1A52 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0D978EE20F99B8600AF1A52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0D978F120F99B8600AF1A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0D978F320F99B8600AF1A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0D978F420F99B8600AF1A52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0D978F620F99B8600AF1A52 /* X11Frustum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = X11Frustum.entitlements; sourceTree = "<group>"; };
+		F0D978FD20F99BBB00AF1A52 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		F0D978FF20F99BC300AF1A52 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		F0D9790120F99D7200AF1A52 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../OpenGlShare/libGLTools.a; sourceTree = "<group>"; };
+		F0D9790520F99E1100AF1A52 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
+		F0D9790620F99E1100AF1A52 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
+		F0D9790720F99E1100AF1A52 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
+		F0D9790820F99E1100AF1A52 /* GLBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatch.h; sourceTree = "<group>"; };
+		F0D9790920F99E1100AF1A52 /* GLBatchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatchBase.h; sourceTree = "<group>"; };
+		F0D9790A20F99E1100AF1A52 /* GLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrame.h; sourceTree = "<group>"; };
+		F0D9790B20F99E1100AF1A52 /* GLFrustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrustum.h; sourceTree = "<group>"; };
+		F0D9790C20F99E1100AF1A52 /* GLGeometryTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLGeometryTransform.h; sourceTree = "<group>"; };
+		F0D9790D20F99E1100AF1A52 /* GLMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMatrixStack.h; sourceTree = "<group>"; };
+		F0D9790E20F99E1100AF1A52 /* GLShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShaderManager.h; sourceTree = "<group>"; };
+		F0D9790F20F99E1100AF1A52 /* GLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTools.h; sourceTree = "<group>"; };
+		F0D9791020F99E1100AF1A52 /* GLTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTriangleBatch.h; sourceTree = "<group>"; };
+		F0D9791120F99E1100AF1A52 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
+		F0D9791220F99E1100AF1A52 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+		F0D9791320F99E2600AF1A52 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../X01BuildOpenGLEnvironment/X01BuildOpenGLEnvironment/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D9790220F99D7200AF1A52 /* libGLTools.a in Frameworks */,
+				F0D9790020F99BC300AF1A52 /* OpenGL.framework in Frameworks */,
+				F0D978FE20F99BBB00AF1A52 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +60,7 @@
 			children = (
 				F0D978E720F99B8400AF1A52 /* X11Frustum */,
 				F0D978E620F99B8400AF1A52 /* Products */,
+				F0D978FC20F99BBB00AF1A52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,17 +75,54 @@
 		F0D978E720F99B8400AF1A52 /* X11Frustum */ = {
 			isa = PBXGroup;
 			children = (
-				F0D978E820F99B8400AF1A52 /* AppDelegate.h */,
-				F0D978E920F99B8400AF1A52 /* AppDelegate.m */,
-				F0D978EB20F99B8400AF1A52 /* ViewController.h */,
-				F0D978EC20F99B8400AF1A52 /* ViewController.m */,
+				F0D9791320F99E2600AF1A52 /* main.cpp */,
+				F0D9790320F99E1100AF1A52 /* include */,
 				F0D978EE20F99B8600AF1A52 /* Assets.xcassets */,
 				F0D978F020F99B8600AF1A52 /* Main.storyboard */,
 				F0D978F320F99B8600AF1A52 /* Info.plist */,
-				F0D978F420F99B8600AF1A52 /* main.m */,
 				F0D978F620F99B8600AF1A52 /* X11Frustum.entitlements */,
 			);
 			path = X11Frustum;
+			sourceTree = "<group>";
+		};
+		F0D978FC20F99BBB00AF1A52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9790120F99D7200AF1A52 /* libGLTools.a */,
+				F0D978FF20F99BC300AF1A52 /* OpenGL.framework */,
+				F0D978FD20F99BBB00AF1A52 /* GLUT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0D9790320F99E1100AF1A52 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9790420F99E1100AF1A52 /* GL */,
+				F0D9790820F99E1100AF1A52 /* GLBatch.h */,
+				F0D9790920F99E1100AF1A52 /* GLBatchBase.h */,
+				F0D9790A20F99E1100AF1A52 /* GLFrame.h */,
+				F0D9790B20F99E1100AF1A52 /* GLFrustum.h */,
+				F0D9790C20F99E1100AF1A52 /* GLGeometryTransform.h */,
+				F0D9790D20F99E1100AF1A52 /* GLMatrixStack.h */,
+				F0D9790E20F99E1100AF1A52 /* GLShaderManager.h */,
+				F0D9790F20F99E1100AF1A52 /* GLTools.h */,
+				F0D9791020F99E1100AF1A52 /* GLTriangleBatch.h */,
+				F0D9791120F99E1100AF1A52 /* math3d.h */,
+				F0D9791220F99E1100AF1A52 /* StopWatch.h */,
+			);
+			name = include;
+			path = ../../OpenGlShare/include;
+			sourceTree = "<group>";
+		};
+		F0D9790420F99E1100AF1A52 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9790520F99E1100AF1A52 /* glew.h */,
+				F0D9790620F99E1100AF1A52 /* glxew.h */,
+				F0D9790720F99E1100AF1A52 /* wglew.h */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0D978ED20F99B8400AF1A52 /* ViewController.m in Sources */,
-				F0D978F520F99B8600AF1A52 /* main.m in Sources */,
-				F0D978EA20F99B8400AF1A52 /* AppDelegate.m in Sources */,
+				F0D9791420F99E2600AF1A52 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +328,13 @@
 				CODE_SIGN_ENTITLEMENTS = X11Frustum/X11Frustum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
 				INFOPLIST_FILE = X11Frustum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccqlearn.X11Frustum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -292,11 +347,13 @@
 				CODE_SIGN_ENTITLEMENTS = X11Frustum/X11Frustum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
 				INFOPLIST_FILE = X11Frustum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../OpenGlShare\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccqlearn.X11Frustum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
